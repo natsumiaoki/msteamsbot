@@ -75,13 +75,16 @@ class MyBot {
     async handleMenuResult(step) {
         switch (step.result.value) {
             case "FAQs":
-                return step.context.sendActivity("FAQs");
+                step.context.sendActivity("FAQsがクリックされました。");
+                return step.next();
             case "Band Search":
-                return step.context.sendActivity("Band Search");
+                step.context.sendActivity("Band Searchがクリックされました。");
+                return step.next();
             case "Navigate":
-                return step.context.sendActivity("Navigate");
+                step.context.sendActivity("Navigateがクリックされました。");
+                return step.next();
         }
-        return step.next();
+      // return step.next();
     }
 
     /**
