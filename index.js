@@ -62,7 +62,7 @@ const adapter = new BotFrameworkAdapter({
     //appPassword: endpointConfig.appPassword || process.env.microsoftAppPassword
 
     //make sure it is in your applications settings
-    appID: process.env.MirosoftAppId,
+    appID: process.env.MicrosoftAppId,
     appPassword: process.env.MicrosoftAppPassword
 
 });
