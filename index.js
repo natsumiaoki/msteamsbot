@@ -36,7 +36,7 @@ server.listen(process.env.port || process.env.PORT || 3978, () => {
     console.log(`\nTo talk to your bot, open my-chat-bot.bot file in the Emulator`);
 });
 
-// .bot file path
+/*// .bot file path
 const BOT_FILE = path.join(__dirname, (process.env.botFilePath || ''));
 
 // Read bot configuration from .bot file.
@@ -50,15 +50,21 @@ try {
     console.error(`\n - See https://aka.ms/about-bot-file to learn more about .bot file its use and bot configuration.\n\n`);
     process.exit();
 }
+*/
 
 // Get bot endpoint configuration by service name
-const endpointConfig = botConfig.findServiceByNameOrId(BOT_CONFIGURATION);
+// const endpointConfig = botConfig.findServiceByNameOrId(BOT_CONFIGURATION);
 
 // Create adapter.
 // See https://aka.ms/about-bot-adapter to learn more about .bot file its use and bot configuration.
 const adapter = new BotFrameworkAdapter({
-    appId: endpointConfig.appId || process.env.microsoftAppID,
-    appPassword: endpointConfig.appPassword || process.env.microsoftAppPassword
+    //appId: endpointConfig.appId || process.env.microsoftAppID,
+    //appPassword: endpointConfig.appPassword || process.env.microsoftAppPassword
+
+    //make sure it is in your applications settings
+    appID: process.env.MirosoftAppID,
+    appPassword: process.env.MicrosoftAppPassword
+
 });
 
 // Catch-all for errors.
