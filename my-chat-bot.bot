@@ -8,10 +8,10 @@
             "appId": "",
             "appPassword": "",
             "id": "1"
-        }
+        },
         {
             "type": "qna",
-            "name": "QnABot",
+            "name": "BotQA_KB",
             "kbId": "281258e8-ee34-411d-ae8b-dc3871e03970",
             "subscriptionKey": "",
             "endpointKey": "757c57d1-b2e4-4c2e-a6da-a9cae63d6e5e",
